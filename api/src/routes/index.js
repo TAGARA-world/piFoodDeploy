@@ -1,12 +1,48 @@
-const { Router } = require('express');
-// Importar todos los routers;
-// Ejemplo: const authRouter = require('./auth.js');
+const { DataTypes } = require("sequelize");
+// Exportamos una funcion que define el modelo
+// Luego le injectamos la conexion a sequelize.
+module.exports = (sequelize) => {
+  // defino el modelo
+  sequelize.define("recipe", {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV1,
 
+      primaryKey: true,
+    },
 
-const router = Router();
+    dish_summary: {
+      type: DataTypes.TEXT,
+    },
+    score: {
+      type: DataTypes.FLOAT,
+      defaultValue: 0,
+      validate: {
+        max: 10,
+        min: 0,
+      },
+    },
 
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
+    healthscore: {
+      type: DataTypes.FLOAT,
+      defaultValue: 0,
+      validate: {
+        max: 100,
+        min: 0,
+      },
+    },
 
+    steps: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
 
-module.exports = router;
+    image: {
+      type: DataTypes.TEXT,
+    },
+  });
+};
