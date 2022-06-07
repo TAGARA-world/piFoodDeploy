@@ -2,19 +2,19 @@ const axios = require("axios");
 const { Diet, Recipe } = require("../db");
 const { API_KEY } = process.env; 
 
-  //  const respuesta =  require("../../respuesta.json") // Si la API NO Funciona
+  //  const respuesta =  require("../../respuesta.json") // ACTIVAR Si la API NO Funciona
 
 const getDiets = async (req, res) => { 
   try { 
     const dietas = await axios.get(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`
-    );
+    ); // ANULAR si la API no funciona (const dietas ...)
 
-    // let dietas = respuesta; // Si la API NO Funciona
+    // let dietas = respuesta; // ACTIVAR Si la API NO Funciona
 
-    const types = await dietas.data.results.map((t) => t.diets);  
+    const types = await dietas.data.results.map((t) => t.diets);  // ANULAR si la API no funciona
 
-    // const types = await dietas['results'].map((t) => t.diets);  // Si la API NO Funciona
+    // const types = await dietas['results'].map((t) => t.diets);  // ACTIVAR Si la API NO Funciona
 
 
     const diets = types.flat();

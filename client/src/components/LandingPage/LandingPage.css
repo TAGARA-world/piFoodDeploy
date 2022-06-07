@@ -1,0 +1,43 @@
+.landingPage {
+    background-image: url("../../images/cocina-pareja-scaled.jpg");
+    background-size: cover;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+  }
+  
+  .landingTitle {
+    color: white;
+    margin-left: 40px;
+    font-size:70px;
+  }
+  
+  .landingSubTitle {
+    color: white;
+    margin-top: 115px;
+    margin-left: -550px;
+    font-size:40px;
+  }
+  
+  .landingButton {
+    position: absolute;
+    top: 30%;
+    left: 6.5%;
+    margin: -25px 0 0 -25px;
+    border-radius: 17px;
+    border: 1px solid #ffffff;
+    padding: 20px 165px;
+    background-color: rgba(255, 255, 255, 0.428);
+    cursor:pointer;
+    font-size: 24px
+  }
+  
+  .landingButton:hover{
+    background-color: rgba(255, 166, 0, 0.268);
+    font-size: 26px;
+    font-weight: bold;
+    color: aquamarine
+  }
+  
