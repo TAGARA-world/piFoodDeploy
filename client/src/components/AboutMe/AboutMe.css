@@ -1,0 +1,36 @@
+.landingPageRamiro{
+    background: transparent;
+
+}
+.title{
+    color: rgb(0, 181, 21);
+    margin-left: 40px;
+    font-size:60px;
+    text-shadow: 3px 3px 2px black; 
+}
+
+.subTitle{
+    color: rgb(255, 166, 0);
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size:30px;
+}
+
+.linkedinButton{
+    margin-bottom: 40px;
+    margin-left: 40px;
+    text-decoration:line-through;
+    background-color: aliceblue;
+}
+
+.githubButton{
+    margin-bottom: 40px;
+    background-color: aliceblue;
+
+}
+
+.portfolioButton{
+    margin-bottom: 40px;
+    text-decoration:line-through;
+}
+

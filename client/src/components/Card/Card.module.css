@@ -1,0 +1,56 @@
+.dietas{
+    background:  darkgoldenrod;
+    height: 70px;
+    border-radius: 24px;
+    padding: 2px ;
+}
+
+
+.score{
+    font-size: 14px;
+    color: withe;
+    color:rgb(0, 0, 0);
+}
+.name{
+    font-family: Arial;
+    margin: 3px;
+    color: rgb(0, 0, 0);
+    padding: 14px;
+    background:rgba(186, 183, 183, 0.613);
+    border-radius: 10px;
+    
+}
+.name:hover{
+    background:rgb(217, 145, 2);
+    box-shadow: 3px -1px 50px 5px rgb(255, 217, 0);
+
+}
+
+img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+p{
+    text-align: center;
+    align-items: center;
+    height: 23px;
+    
+}
+
+.conteiner{
+    width: 90%;
+    max-width: 120rem;
+    margin: 1px auto;
+    padding: 18px 18px;
+    box-shadow: 3px -1px 50px -11px rgb(4, 4, 4);
+    border-radius: 25px;
+}
+.conteiner:hover{
+    background-color: rgb(128, 128, 128);
+    size: 110%;
+}
+
+.image{
+    background-size: cover;
+}

@@ -1,8 +1,7 @@
 import React from "react";
-import './Paginacion.css';
-
-
-export default function Paginado({recipes, couPerPage, paginado}){
+import './Paginado.css'
+// ALTO
+export default function Paginado({couPerPage, recipes, paginado}){
     const pageNumbrers = []
     for (let i = 1; i <= Math.ceil(recipes/couPerPage); i++) {
         pageNumbrers.push(i)   
@@ -10,35 +9,28 @@ export default function Paginado({recipes, couPerPage, paginado}){
     //---------------------------------
     setTimeout(() => {
         const btnContainer = document.getElementById("MyId");
-        // Get all buttons with class="btn" inside the container
-      if(btnContainer) { var btns = btnContainer.getElementsByClassName("numero");
-        
-        // // Loop through the buttons and add the active class to the current/clicked button
+        if(btnContainer) { var btns = btnContainer.getElementsByClassName("numero");
         for (var j = 0; j < btns.length; j++) {
           btns[j].addEventListener("click", function() {
             var current = document.getElementsByClassName("active");
-        
-            // If there's no active class
             if (current.length > 0) {
               current[0].className = current[0].className.replace(" active", "");
             }
-        
-            // Add the active class to the current/clicked button
             this.className += " active";
           });
         }
 }
     }, 1000);
-//----------------------------------------------
+    //----------------------------------------------
 
     return(
         <nav className='paginadoContainer'>
             <div id="MyId" className ='number'>
                 {pageNumbrers && 
-                pageNumbrers.map(number =>(
-                    //<li key={number}>
-                        <a  href onClick={()=>paginado(number)} className ='numero' value={number} > {number} </a>  
-                    //</li> 
+                    pageNumbrers.map(number =>(
+                    <li key={number.toString()}>
+                        <p   onClick={()=>paginado(number)} className ='numero' value={number} > {number} </p>
+                    </li> 
                 ))}
             </div>
         </nav>

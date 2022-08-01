@@ -62,9 +62,8 @@ import {
         const allRecipes = state.copia;
   
         const all =
-          action.payload === "All"
-            ? allRecipes
-            : allRecipes.filter((el) => el.type?.includes(action.payload));
+          action.payload === "All"? allRecipes
+          : allRecipes.filter((el) => el.type?.includes(action.payload));
   
         return {
           ...state,
@@ -89,13 +88,13 @@ import {
         let orderByScore =
           action.payload === "min"
             ? scoreSorted.sort((a, b) => {
-                if (a.score < b.score) return -1;
+                if (a.healthyScore < b.healthyScore) return -1;
                 if (a.score > b.score) return 1;
                 return 0;
               })
             : scoreSorted.sort((a, b) => {
-                if (a.score < b.score) return 1;
-                if (a.score > b.score) return -1;
+                if (a.healthyScore < b.healthyScore) return 1;
+                if (a.healthyScore > b.healthyScore) return -1;
                 return 0;
               });
   

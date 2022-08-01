@@ -1,5 +1,5 @@
 .landingPage {
-    background-image: url("../../images/cocina-pareja-scaled.jpg");
+    background: url('../../images/cocina-pareja-scaled.jpg') center / cover no-repeat;
     background-size: cover;
     padding: 0;
     width: 100vw;
@@ -9,21 +9,22 @@
   }
   
   .landingTitle {
-    color: white;
+    color: rgb(0, 181, 21);
     margin-left: 40px;
-    font-size:70px;
+    font-size:60px;
+    text-shadow: 3px 3px 2px black; 
   }
   
   .landingSubTitle {
-    color: white;
+    color: rgb(255, 166, 0);
     margin-top: 115px;
-    margin-left: -550px;
-    font-size:40px;
+    margin-left: -500px;
+    font-size:30px;
   }
   
   .landingButton {
     position: absolute;
-    top: 30%;
+    top: 27%;
     left: 6.5%;
     margin: -25px 0 0 -25px;
     border-radius: 17px;
@@ -38,6 +39,25 @@
     background-color: rgba(255, 166, 0, 0.268);
     font-size: 26px;
     font-weight: bold;
-    color: aquamarine
+    color: rgba(31, 1, 255, 0.57)
   }
   
+  .aboutme{
+    position: absolute;
+    top: 95%;
+    left: 3.5%;
+    margin: -25px 0 0 -25px;
+    border-radius: 7px;
+    border: 1px solid #11037c;
+    padding: 10px 35px;
+    background-color: rgba(255, 255, 255, 0.428);
+    cursor:pointer;
+    font-size: 12px;
+  }
+
+  .aboutme:hover{
+    background-color: rgba(255, 166, 0, 0.268);
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(31, 1, 255)
+  }

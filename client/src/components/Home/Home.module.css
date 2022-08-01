@@ -1,0 +1,65 @@
+
+div .flex{    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    place-items: center;
+    place-content: center;
+
+}
+@media screen and (max-width:900px) {
+    div .flex{
+       grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:760px) {
+    div .flex{
+       grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:450px) {
+    div .flex{
+       grid-template-columns: repeat(1,1fr);
+    }
+}
+.refres{
+    display: flex;
+    justify-content: center;
+   
+}
+.btn p{
+    font-size: 14px;
+}
+.btn{
+    cursor: pointer;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.61);
+}
+
+.conteiner{
+    width: 90%;
+    max-width: 120rem;
+    margin: 1px auto;
+}
+
+.options{
+    display:flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.479);
+    /* color: black; */
+   /* width: 100%; */
+
+}
+
+.na{
+    font-size:18px;
+    color: rgba(0, 0, 0, 0.623);
+    cursor: pointer;
+
+}
+
+.parrafe{
+    font-size: 17px;
+}
+
