@@ -1,15 +1,22 @@
 const axios = require("axios");
 const { Diet, Recipe } = require("../db");
   const { API_KEY} = process.env;
-  // const respuesta = require("../../respuesta.json") 
+  const respuesta = require("../../respuesta.json") // ACTIVAR si la API no funciona
 
 const getApiData = async () => {  
   try {
-    const apiUrl = await axios.get(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`
-    );
-        //  let apiUrl = respuesta;
-    const apiData = apiUrl.data.results.map((recipes) => { 
+//DESDE LA API
+    // const apiUrl = await axios.get(
+    //   `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`
+    // ); 
+    //const apiData = apiUrl.data.results.map((recipes) => { 
+//FIN API
+
+// DESDE EL JSON
+      let apiUrl = respuesta; // ACTIVAR si la API no funciona
+      const apiData = apiUrl['results'].map((recipes) => { // ACTIVAR si la API no funciona
+// fIN JSON
+
       return {   
         id: recipes.id.toString(),
         image: recipes.image,
